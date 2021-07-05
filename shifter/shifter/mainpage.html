@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css"/>
+    <link rel="stylesheet" href="assets/firstPage/nav.css"/> <!-- reusing css file -->
+    <link rel="stylesheet" href="assets/mainpage/body.css"/>
+    <link rel="stylesheet" href="assets/mainpage/modal.css">
+
+    <title>shifter</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="mainpage.html" id="navbar_logo">shifter</a>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a class="navbar_links" id="settings-page">Settings</a>
+                </li>
+                <li class="navbar_button">
+                    <a class="navbar_links" id="signin">Sign Out</a>
+                </li>
+                <li class="navbar_button">
+                    <a class="button" id="create_post" href="addpost.html">Create Post</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- status -->
+    <div class="frontpage">
+        <div class="frontpage_container">
+            <h1>Logged in as: <span id="email">Username</span></h1>
+            <p><span id="username">Blank</span> owner</p>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <img id="compimg">
+            <div id="mhead-container">
+                <div class="title" id="title"></div>
+                <div id="modal_email"></div>
+            </div>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+    <div id="overlay"></div>
+    <!-- posts -->
+     <div class="postlist" id="postlist">
+        
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDN-s4b5YygqXdh6GHn39U50jOuBN3gvX8",
+            authDomain: "test-prod-567c5.firebaseapp.com",
+            projectId: "test-prod-567c5",
+            storageBucket: "test-prod-567c5.appspot.com",
+            messagingSenderId: "821756813264",
+            appId: "1:821756813264:web:fc17714835702d9e02a3d5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore(); 
+
+        db.settings({timestampsInSnapshots:true });
+    </script>
+
+    <script src="scripts/mainpage.js"></script>
+</body>
+</html>

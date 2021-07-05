@@ -1,0 +1,92 @@
+/* Note: this file is also used for mainPage.html. If needed, create a separate file for mainpage.html */
+
+.navbar {
+    background: #e8fccf;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 10;
+}
+  
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+  
+#navbar_logo {
+    background-color: #e8fccf;
+    background-image: linear-gradient(to right, #3e8914 0%, #96e072 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+  
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+  
+.navbar_item {
+    height: 80px;
+}
+  
+.navbar_links {
+    color: #96e072;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar_links:hover {
+    color: #3da35d;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+  
+.navbar_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, #22577a, #38a3a5, #57cc99, #80ed99, #c7f9cc);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.button:hover{
+    opacity: 0.7;
+}

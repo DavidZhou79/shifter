@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css"/>
+    <link rel="stylesheet" href="assets/addpost/addpost.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="centered">
+        <h1>Create a Post</h1>
+
+        <h2>What are you donating?</h2>
+        <input type="text" id="food_name">
+
+        <h2>Description of Food</h2>
+        <textarea name="" id="deschere" cols="30" rows="10"></textarea>
+        <br>
+
+        <h2>Upload Picture</h2>
+        <form style="color: white" action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+        </form>
+
+        <button class="postBtn" id="postBtn">Post</button>
+        
+        <button class="cancelBtn"><a href="mainpage.html">Cancel</a></button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDN-s4b5YygqXdh6GHn39U50jOuBN3gvX8",
+            authDomain: "test-prod-567c5.firebaseapp.com",
+            projectId: "test-prod-567c5",
+            storageBucket: "test-prod-567c5.appspot.com",
+            messagingSenderId: "821756813264",
+            appId: "1:821756813264:web:fc17714835702d9e02a3d5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore(); 
+
+        db.settings({timestampsInSnapshots:true });
+    </script>
+
+    <script src="scripts/newpost.js"></script>
+</body>
+</html>

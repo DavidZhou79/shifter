@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css"/>
+    <link rel="stylesheet" href="assets/signupPage/signup.css"/>
+    <title>Sign Up to shifter</title>
+</head>
+<body>
+    <div class="centered">
+        <h1>Sign Up</h1>
+
+        <h2>Email</h2>
+        <input type="email" id="email_">
+        <h2>Username</h2>
+        <input type="text" id="username_">
+        <h2>Password</h2>
+        <input type="password" id="password_">
+
+        <h2 class="question">Are you a Restaurant or a Soup Kitchen?</h2>
+        <input name=radioBtn type="radio" value="Restaurant" id="sel1">
+        <label style="color: white" for="restaurant">Restaurant</label>
+        <input name=radioBtn type="radio" value="Kitchen" id="sel2">
+        <label style="color: white" for="kitchen">Kitchen</label>
+
+        <h2>Company Logo</h2>
+        <form style="color: white" action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+        </form>
+
+        <h2>Please provide a short description below</h2>
+        <textarea placeholder="Tell us a bit about yourself!" name="" id="bio_" cols="60" rows="5"></textarea>
+        <br>
+
+        <button class="createAccount" id="createAccount">Create Account</button>
+        <br>
+        <button><a href="signin.html">Already a Member?</a></button>
+        <button><a href="index.html">Back to Home Page</a></button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDN-s4b5YygqXdh6GHn39U50jOuBN3gvX8",
+            authDomain: "test-prod-567c5.firebaseapp.com",
+            projectId: "test-prod-567c5",
+            storageBucket: "test-prod-567c5.appspot.com",
+            messagingSenderId: "821756813264",
+            appId: "1:821756813264:web:fc17714835702d9e02a3d5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore(); 
+
+        db.settings({timestampsInSnapshots:true });
+    </script>
+
+    <script src="scripts/signup.js"></script>
+</body>
+</html>
+
+<!--
+username
+email
+password
+image
+desc
+-->

@@ -1,0 +1,49 @@
+.centered {
+    background: linear-gradient(to bottom, #57CC99, #80ED99);
+    padding: 100px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: white;
+}
+
+input {
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.signInBtn {
+    margin-top: 50px;
+    margin-bottom: 75px;
+    font-size: 40px;
+}
+
+.signInBtn, .createAccount, .homeBtn {
+    color: white;
+    background-color: #38A3A5;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.signInBtn:hover, .signUpBtn:hover, .homeBtn:hover {
+    opacity: 0.7;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

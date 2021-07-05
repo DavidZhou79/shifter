@@ -1,0 +1,30 @@
+.frontpage {
+    background: linear-gradient(to bottom, #e8fccf, #80ed99);
+    padding: 200px 0;
+}
+  
+.frontpage_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+  
+.frontpage_heading {
+    font-size: 80px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+  
+.frontpage_subheading {
+    font-size: 40px;
+    background: linear-gradient(to right, #3e8914, #96e072);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
